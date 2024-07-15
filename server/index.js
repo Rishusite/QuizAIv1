@@ -14,11 +14,7 @@ dotenv.config();
 const app=express();
 const port=process.env.PORT || 8000;
 
-app.use(cors(
-  {
-  origin: "https://quiz-frontend-sigma.vercel.app",
-  }
-));
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
