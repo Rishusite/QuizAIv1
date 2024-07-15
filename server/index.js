@@ -134,7 +134,7 @@ app.post('/',async(req,res)=>{
 //////////////////////////////Registrations//////////////////////////////////
 
 let userquizstates=mongoose.model('userhandleStats',userStats);
-app.post('/register',async(req,res)=>{
+app.post('register',async(req,res)=>{
   const usern=req.body.username;
   const phone=req.body.phoneNumber;
   const email=req.body.emailId;
@@ -217,7 +217,7 @@ app.post('/register',async(req,res)=>{
 })
 
 //////////////////////////Forgot Password//////////////////////////
-app.post('/forgot',async(req,res)=>{
+app.post('forgot',async(req,res)=>{
   const usern=req.body.username;
   const phone=req.body.phonenumber;
   const pass=req.body.password;
@@ -237,7 +237,7 @@ app.post('/forgot',async(req,res)=>{
 
 
 ///////////////////////////User Handle/////////////////////////////
-app.post('/userhandle',async(req,res)=>{
+app.post('userhandle',async(req,res)=>{
   const userid=req.body.id;
   const result=await newUser.find({id:userid});
   //cconsole.log("Post request",result);
