@@ -83,6 +83,10 @@ app.get('/',(req,res)=>{
   return res.send("Hello From Server");
 })
 
+app.get('/z',(req,res)=>{
+  return res.send("Hello From Server z");
+})
+
 
 app.get('/generateqs/:prompt',async (req,res)=>{
     const sub=req.params.prompt;
