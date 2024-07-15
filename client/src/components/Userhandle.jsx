@@ -11,7 +11,7 @@ const Userhandle = () => {
   const userid=params.id;
   const data={id: userid};
   const [userData,setUserdata]=useState({});
-  axios.post("https://quizappv2-one.vercel.app/userhandle",data).then((res)=>{
+  axios.post("https://quiz-server-nu.vercel.app/userhandle",data).then((res)=>{
     if(res.data===false){
       navigate('/');
     }
