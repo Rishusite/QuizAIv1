@@ -15,7 +15,7 @@ const app=express();
 const port=process.env.PORT || 8000;
 
 app.use(cors(
-  origin: ["https://quiz-frontend-sigma.vercel.app"],
+  origin: ["https://quiz-frontend-sigma.vercel.app/"],
   methods: ["POST","GET"]
 ));
 app.use(bodyParser.urlencoded({ extended: true }));
