@@ -18,7 +18,7 @@ const Downloads = () => {
   }, []);
 
   async function getAll(sub){
-    await axios.get(`https://quizappv2-one.vercel.app/downloads/${uid}/${sub}`).then((res)=>{
+    await axios.get(`https://quiz-server-nu.vercel.app/downloads/${uid}/${sub}`).then((res)=>{
       if(res.data==='false'){
         setshow(0);
       }
@@ -53,7 +53,7 @@ const Downloads = () => {
   };
 
 async function createAndDownloadPdf(data,sub){
-  await axios.post('https://quizappv2-one.vercel.app/create-pdf', {data: data, sub: sub})
+  await axios.post('https://quiz-server-nu.vercel.app/create-pdf', {data: data, sub: sub})
     .then(async() => await axios.get('https://quizappv2-one.vercel.app/fetch-pdf', { responseType: 'blob' }))
     .then((res) => {
       const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
